@@ -219,7 +219,7 @@ footer {
 
 @media (max-width: 600px) {
     main {
-        padding: 1em;
+        padding: 0em;
     }
 
     .products-container {
