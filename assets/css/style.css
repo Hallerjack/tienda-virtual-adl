@@ -1,7 +1,3 @@
-.box {
-    border: solid 1px aqua;
-}
-
 /* --- AJUSTES GENERALES --- */ 
 
 * {
@@ -198,26 +194,25 @@ footer {
 
 /* --- RESPONSIVE --- */
 
-
-@media (max-width: 1000px) {
+@media screen and  (max-width: 1000px) {
     .products-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 850px) {
+@media screen and (max-width: 850px) {
     .products-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 750px) {
+@media screen and  (max-width: 750px) {
     .products-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     main {
         padding: 0em;
     }
@@ -226,24 +221,31 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    menu a {
-        font-size: 0.8em;
-    }
-
     header h1 {
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 
+    .navbar {
+        gap: 0px;
+    }
+    
     header a{
         font-size: 0.8em;
     }
 
+    menu a {
+        font-size: 0.8em;
+        padding: 0em;
+    }
+    
     menu h3 {
         padding: 0em 1em;
+        font-size: 0.9em;
     }
 
     menu li {
         list-style: none;
         padding: 0.5em 1em;
     }
+
 }
