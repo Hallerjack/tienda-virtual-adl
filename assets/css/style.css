@@ -15,9 +15,11 @@
 }
 
 body {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     background-color: var(--bg-color);
 }
+
+
 
 /* .box {
     border: solid 1px aqua;
@@ -38,23 +40,63 @@ body {
 
 header {
     grid-area: header;
-    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1.5em;
+    height: 4em;
     background-color: var(--primary-color);
+    color: #FFF;
 }
+
+header h1 {
+    font-family: "BBH Bartle", sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar li {
+    list-style: none;
+    transition: 0.3s;
+}
+
+.navbar li:hover {
+    background-color: #4A5568;
+}
+
+.navbar a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1.5em 1em;
+}
+
+/* --- MENÚ LATERAL ---*/
 
 menu {
     grid-area: menu;
-    min-height: auto;
+    height: auto;
     background-color: var(--light-bg-color);
 }
 
 main {
     grid-area: main;
-    min-height: 500px;
+    height: 620px;
 }
 
 footer {
     grid-area: footer;
-    min-height: auto;
+    height: 60px;
     background-color: var(--tertiary-color);
 }
