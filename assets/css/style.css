@@ -218,6 +218,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+    main {
+        padding: 1em;
+    }
+
     .products-container {
         grid-template-columns: 1fr;
     }
