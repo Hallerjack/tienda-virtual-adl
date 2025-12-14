@@ -25,6 +25,20 @@ body {
     background-color: var(--bg-color);
 }
 
+h3 {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+h4 {
+    font-size: 1.3em;
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 0.8em;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 6fr;
@@ -33,7 +47,6 @@ body {
         'menu main'
         'footer footer'
     ;
-    height: 100dvh;
 }
 
 /* --- HEADER --- */ 
@@ -119,21 +132,91 @@ menu li:hover {
     background-color: var(--tertiary-color);
     color: white;
     transition: 0.3s;
-
 }
-
-
 
 /* --- PRODUCTS SECTION --- */
 
 main {
     grid-area: main;
-    height: 620px;
     padding: 2em;
 }
 
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1000px) {
+    .products-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .products-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.cover-album {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+
+}
+
+button:hover {
+    background-color: var(--acent-color);
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 60px;
     background-color: var(--tertiary-color);
+    color: white;
 }
