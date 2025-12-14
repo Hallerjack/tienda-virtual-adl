@@ -1,3 +1,7 @@
+.box {
+    border: solid 1px aqua;
+}
+
 /* --- AJUSTES GENERALES --- */ 
 
 * {
@@ -12,18 +16,14 @@
     --acent-color: #8B5CF6;
     --light-bg-color: #e2e6ed;
     --bg-color: #FFF;
+    --text-color: #3c3c3c;
+    --text-light-color: #a1a1a1;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     background-color: var(--bg-color);
 }
-
-
-
-/* .box {
-    border: solid 1px aqua;
-} */
 
 .grid-container {
     display: grid;
@@ -86,13 +86,50 @@ header h1 {
 
 menu {
     grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     height: auto;
+    padding: 2em 0em;
     background-color: var(--light-bg-color);
 }
+
+menu h3 {
+    padding: 0em 1.5em;
+    color: var(--text-color)
+}
+
+menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+menu li {
+    list-style: none;
+    padding: 0.5em 2em;
+}
+
+menu a {
+    text-decoration: none;
+    color: var(--text-light-color);
+}
+
+menu li:hover {
+    background-color: var(--tertiary-color);
+    color: white;
+    transition: 0.3s;
+
+}
+
+
+
+/* --- PRODUCTS SECTION --- */
 
 main {
     grid-area: main;
     height: 620px;
+    padding: 2em;
 }
 
 footer {
