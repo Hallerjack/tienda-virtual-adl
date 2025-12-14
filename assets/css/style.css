@@ -1,0 +1,60 @@
+/* --- AJUSTES GENERALES --- */ 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2D3748;
+    --secondary-color: #4A5568;
+    --tertiary-color: #1A202C;
+    --acent-color: #8B5CF6;
+    --light-bg-color: #e2e6ed;
+    --bg-color: #FFF;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: var(--bg-color);
+}
+
+/* .box {
+    border: solid 1px aqua;
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+        'header header'
+        'menu main'
+        'footer footer'
+    ;
+    height: 100dvh;
+}
+
+/* --- HEADER --- */ 
+
+header {
+    grid-area: header;
+    min-height: 50px;
+    background-color: var(--primary-color);
+}
+
+menu {
+    grid-area: menu;
+    min-height: auto;
+    background-color: var(--light-bg-color);
+}
+
+main {
+    grid-area: main;
+    min-height: 500px;
+}
+
+footer {
+    grid-area: footer;
+    min-height: auto;
+    background-color: var(--tertiary-color);
+}
